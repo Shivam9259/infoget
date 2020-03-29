@@ -30,6 +30,7 @@
       if (isset($_POST['email'])) {
         $email = trim(strtolower($_POST['email']));
         $password = trim($_POST['password']);
+        $password = md5($password);
         $found = 0;
         $query = "SELECT * FROM admin";
 
